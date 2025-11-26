@@ -52,7 +52,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
   .ocean-container {
     position: relative;
     width: 100%;
-    min-height: 11000px; /* Total depth */
+    height: 18300px; /* Total depth */
   }
 
   /* Depth markers styling */
@@ -278,8 +278,8 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
   {/* Content section with gradient background */}
   <div class="wave-border"></div>
   <section
-    class="min-h-screen relative"
-    style="background: linear-gradient(180deg, #17bdff 0%, #1e3a8a 50%, #000000 100%);"
+    class="relative"
+    style="background: linear-gradient(180deg, #17bdff 0%, #1e3a8a 50%, #000000 100%); min-height: 18550px;"
   >
     {/* Ocean container with all concepts */}
     <div class="ocean-container">
@@ -287,7 +287,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
       {
         zones.map((zone) => (
           <div class="zone-label" style={`top: ${zone.start + 100}px;`}>
-            {zone.name} 
+            {zone.name}
           </div>
         ))
       }
@@ -331,7 +331,6 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
       }
     </div>
   </section>
-  <div class="bg-black min-h-screen text-white p-5">Honorable Mentions @<a href="https://neal.fun/deep-sea/" target="_blank" class="text-blue underline hover:text-blue-500">Neal.Fun</a></div>
 </main>
 
 <script>

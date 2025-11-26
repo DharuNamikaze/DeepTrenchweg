@@ -242,49 +242,47 @@ export const depthMarkers = Array.from({ length: 55 }, (_, i) => i * 200);
 
 // Zone definitions for background gradients
 export const zones = [
-  { name: 'Surface', start: 0, end: 1000, color: '#1a5f7a' },
-  { name: 'Twilight', start: 1000, end: 3000, color: '#0d2f44' },
-  { name: 'Midnight', start: 3000, end: 6000, color: '#0a1929' },
+  { name: 'Hello World', start: 0, end: 1000, color: '#1a5f7a' },
+  { name: 'Actually Good', start: 1000, end: 3000, color: '#0d2f44' },
+  { name: 'Understanding Code', start: 3000, end: 6000, color: '#0a1929' },
   { name: 'Abyssal', start: 6000, end: 9000, color: '#050a14' },
-  { name: 'Hadal', start: 9000, end: 11000, color: '#000000' }
+  { name: 'Touching Grass', start: 9000, end: 11000, color: '#000000' }
 ];
-```
 
-### **Phase 3: Visual Design Ideas**
 
-**Color Scheme (Ocean Depth Gradient):**
-- Surface (0-1000m): #1a5f7a → #0d4f6b (Blue-teal)
-- Twilight (1000-3000m): #0d2f44 → #0a2439 (Deep blue)
-- Midnight (3000-6000m): #0a1929 → #070f1a (Navy black)
-- Abyssal (6000-9000m): #050a14 → #03050a (Nearly black)
-- Hadal (9000m+): #000000 (Pure black)
+// Phase 3: Visual Design Ideas
 
-**Concept Sizes:**
-- large: 120-150px (major concepts like Transformers, CNNs)
-- medium: 80-100px (supporting concepts)
-- small: 50-60px (technical details)
+// Color Scheme (Ocean Depth Gradient):
+// - Surface (0-1000m): #1a5f7a → #0d4f6b (Blue-teal)
+// - Twilight (1000-3000m): #0d2f44 → #0a2439 (Deep blue)
+// - Midnight (3000-6000m): #0a1929 → #070f1a (Navy black)
+// - Abyssal (6000-9000m): #050a14 → #03050a (Nearly black)
+// - Hadal (9000m+): #000000 (Pure black)
 
-**Image Style Suggestions:**
-- Use **line art** or **minimalist icons** in white/cyan
-- Glowing effect for deeper concepts
-- Semi-transparent to blend with ocean
-- Consider adding subtle animations (float, pulse)
+// **Concept Sizes:**
+// - large: 120-150px (major concepts like Transformers, CNNs)
+// - medium: 80-100px (supporting concepts)
+// - small: 50-60px (technical details)
 
-### **Phase 4: Image Preparation Checklist**
+// **Image Style Suggestions:**
+// - Use **line art** or **minimalist icons** in white/cyan
+// - Glowing effect for deeper concepts
+// - Semi-transparent to blend with ocean
+// - Consider adding subtle animations (float, pulse)
 
-**Before Development:**
-1. Create/find 30-40 ML concept icons
-2. Convert all to **WebP format** (90% quality)
-3. Target size: **30-80KB per image**
-4. Dimensions: 
-   - Large: 150x150px
-   - Medium: 100x100px
-   - Small: 60x60px
-5. Use tools: Squoosh.app or ImageMagick
+// ### **Phase 4: Image Preparation Checklist**
 
-**Naming Convention:**
-```
-gradient-descent.webp
-neural-network.webp
-backpropagation.webp
-transformer.webp
+// **Before Development:**
+// 1. Create/find 30-40 ML concept icons
+// 2. Convert all to **WebP format** (90% quality)
+// 3. Target size: **30-80KB per image**
+// 4. Dimensions: 
+//    - Large: 150x150px
+//    - Medium: 100x100px
+//    - Small: 60x60px
+// 5. Use tools: Squoosh.app or ImageMagick
+
+// gradient-descent.webp
+// neural-network.webp
+// backpropagation.webp
+// transformer.webp

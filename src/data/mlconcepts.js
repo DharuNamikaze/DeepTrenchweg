@@ -6,7 +6,7 @@ export const mlConcepts = [
     id: 'linear-regression',
     name: 'Linear Regression',
     depth: 150,
-    image: 'linear-regression.webp',
+    image: 'linearReg.webp',
     description: 'Finding the best-fit line through data points',
     category: 'supervised-learning',
     size: 'large'

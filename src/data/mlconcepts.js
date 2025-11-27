@@ -6,7 +6,7 @@ export const mlConcepts = [
     id: 'linear-regression',
     name: 'Linear Regression',
     depth: 100,
-    image: 'linear-regression.webp',
+    image: 'linear.webp',
     description: 'Finding the best-fit line through data points',
     category: 'classical-ml',
     size: 'large'
@@ -15,25 +15,25 @@ export const mlConcepts = [
     id: 'logistic-regression',
     name: 'Logistic Regression',
     depth: 180,
-    image: 'logistic-regression.webp',
+    image: 'logistic.webp',
     description: 'Classification using the sigmoid function',
     category: 'classical-ml',
-    size: 'medium'
+    size: 'large'
   },
   {
     id: 'decision-trees',
     name: 'Decision Trees',
     depth: 260,
-    image: 'decision-trees.webp',
+    image: 'decision.webp',
     description: 'Tree-based decisions for classification',
     category: 'classical-ml',
-    size: 'medium'
+    size: 'large'
   },
   {
     id: 'random-forests',
     name: 'Random Forests',
     depth: 340,
-    image: 'random-forests.webp',
+    image: 'random.webp',
     description: 'Ensemble of decision trees for robust predictions',
     category: 'ensemble',
     size: 'large'
@@ -1440,8 +1440,8 @@ export const depthMarkers = Array.from({ length: 92 }, (_, i) => i * 200);
 // Zone definitions for background gradients
 export const zones = [
   { name: 'Hello World', start: 0, end:500, color: '#1a5f7a' },
-  { name: 'Actually Good', start: 500, end: 1000, color: '#0d2f44' },
-  { name: 'Understanding Code', start: 1000, end: 2000, color: '#0a1929' },
-  { name: 'Abyssal', start: 2000, end: 4000, color: '#050a14' },
-  { name: 'Touching Grass', start: 1000, end: 18200, color: '#000000' }
+  { name: 'Actually Good', start: 1500, end: 2000, color: '#0d2f44' },
+  { name: 'Understanding Code', start: 2000, end: 3000, color: '#0a1929' },
+  { name: 'Abyssal', start: 3000, end: 4000, color: '#050a14' },
+  { name: 'Touching Grass', start: 4000, end: 18200, color: '#000000' }
 ];

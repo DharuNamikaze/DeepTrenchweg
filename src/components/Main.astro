@@ -3,6 +3,30 @@ import "../pages/_index.css";
 import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
 ---
 
+<style is:global>
+  /* Reset default margins and ensure full width */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+</style>
+
 <style>
   /* Wave animation: horizontal scroll effect */
   @keyframes wave {
@@ -32,6 +56,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     position: relative;
     top: -75px;
     overflow: visible;
+    width: 100vw;
   }
 
   /* Wave animation div */
@@ -46,6 +71,25 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     background-size: 600px 120px;
     animation: wave-slow 8s linear infinite;
     z-index: 5;
+  }
+
+  /* Hero section */
+  .hero-section {
+    background: linear-gradient(to top, #fef3c7, #fffbeb);
+    height: 82vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ocean section */
+  .ocean-section {
+    position: relative;
+    background: linear-gradient(180deg, #17bdff 0%, #1e3a8a 50%, #000000 100%);
+    min-height: 18550px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
   }
 
   /* Ocean container styling */
@@ -79,7 +123,6 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
       opacity 0.8s ease,
       transform 0.8s ease;
     cursor: pointer;
-    z-index: 20;
   }
 
   .ml-concept.visible {
@@ -87,22 +130,89 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     transform: translateY(0);
   }
 
-  /* Concept positioning - scattered horizontally */
-  .ml-concept:nth-child(3n + 1) {
-    left: 15%;
+  /* Concept positioning - scattered horizontally on large screens */
+  .ml-concept:nth-child(6n + 1) {
+    left: 10%;
   }
 
-  .ml-concept:nth-child(3n + 2) {
+  .ml-concept:nth-child(6n + 2) {
+    left: 30%;
+  }
+
+  .ml-concept:nth-child(6n + 3) {
     left: 50%;
     transform: translateX(-50%) translateY(30px);
   }
 
-  .ml-concept.visible:nth-child(3n + 2) {
+  .ml-concept.visible:nth-child(6n + 3) {
     transform: translateX(-50%) translateY(0);
   }
 
-  .ml-concept:nth-child(3n + 3) {
-    right: 15%;
+  .ml-concept:nth-child(6n + 4) {
+    right: 30%;
+  }
+
+  .ml-concept:nth-child(6n + 5) {
+    right: 10%;
+  }
+
+  .ml-concept:nth-child(6n) {
+    left: 20%;
+  }
+
+  /* Responsive: Container with centered content on small screens */
+  @media (max-width: 768px) {
+    .ocean-section {
+      padding: 0 1rem;
+    }
+
+    .ocean-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Keep scattered positioning on mobile, just within smaller container */
+    .ml-concept:nth-child(6n + 1) {
+      left: 15%;
+    }
+
+    .ml-concept:nth-child(6n + 2) {
+      left: 25%;
+    }
+
+    .ml-concept:nth-child(6n + 3) {
+      left: 50%;
+      transform: translateX(-50%) translateY(30px);
+    }
+
+    .ml-concept.visible:nth-child(6n + 3) {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .ml-concept:nth-child(6n + 4) {
+      right: 25%;
+    }
+
+    .ml-concept:nth-child(6n + 5) {
+      right: 15%;
+    }
+
+    .ml-concept:nth-child(6n) {
+      left: 35%;
+    }
+
+    .depth-marker {
+      left: 10px;
+      font-size: 12px;
+    }
+  }
+
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    .ocean-container {
+      max-width: 100%;
+      padding: 0 0.5rem;
+    }
   }
 
   /* Image container with glow effect */
@@ -137,6 +247,24 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     height: 60px;
   }
 
+  /* Responsive: Smaller images on mobile */
+  @media (max-width: 768px) {
+    .ml-concept.large .concept-image-container {
+      width: 120px;
+      height: 120px;
+    }
+
+    .ml-concept.medium .concept-image-container {
+      width: 80px;
+      height: 80px;
+    }
+
+    .ml-concept.small .concept-image-container {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
   .concept-image {
     width: 100%;
     height: 100%;
@@ -151,6 +279,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     left: 50%;
     transform: translateX(-50%);
     margin-top: 15px;
+    position: fixed;
     padding: 15px 20px;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
@@ -161,11 +290,13 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 100;
+    z-index: 9999;
   }
 
   .ml-concept:hover .concept-info {
     opacity: 1;
+    z-index: 999;
+    pointer-events: auto;
   }
 
   .concept-info h3 {
@@ -206,7 +337,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     font-size: 18px;
     color: #87ceeb;
     font-weight: bold;
-    z-index: 1000;
+    z-index: 9999;
   }
 
   /* Zone labels */
@@ -220,7 +351,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     text-transform: uppercase;
     letter-spacing: 4px;
     pointer-events: none;
-    z-index: 5;
+    z-index: 9999;
   }
 
   /* Floating animation for concepts */
@@ -247,40 +378,85 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
     animation-delay: 2s;
     animation-duration: 8s;
   }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Title section */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 36vh;
+  }
+
+  .title-container h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .title-container h5 {
+    padding: 0.75rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .title-container h1 {
+      font-size: 2rem;
+    }
+
+    .zone-label {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
 </style>
 
 <main>
   {/* Hero section: gradient background with navigation and title */}
-  <section class="bg-linear-to-t to-amber-100 from-amber-50 h-[82vh]">
+  <section class="hero-section">
     {/* Navigation links */}
-    <nav class="flex justify-between p-2">
+    <nav>
       <a
         href="https://dharuportfolio.netlify.app/"
         target="_blank"
-        class="hover:underline"
+        rel="noopener noreferrer"
         >Nami
       </a>
       <a
         href="https://abinesh-mathivanan.vercel.app/"
         target="_blank"
-        class="hover:underline"
+        rel="noopener noreferrer"
         >Beens
       </a>
     </nav>
 
     {/* Centered title and subtitle */}
-    <div class="flex flex-col justify-center items-center pt-[36vh]">
-      <h1 class="font-bold text-5xl">The Deep Trench</h1>
-      <h5 class="p-3 font-medium">by Beens & Nami</h5>
+    <div class="title-container">
+      <h1>The Deep Trench</h1>
+      <h5>by Beens & Nami</h5>
     </div>
   </section>
 
   {/* Content section with gradient background */}
   <div class="wave-border"></div>
-  <section
-    class="relative"
-    style="background: linear-gradient(180deg, #17bdff 0%, #1e3a8a 50%, #000000 100%); min-height: 18550px;"
-  >
+  <section class="ocean-section">
     {/* Ocean container with all concepts */}
     <div class="ocean-container">
       {/* Zone labels */}
@@ -292,7 +468,6 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
         ))
       }
 
-      {/* Depth markers every 200m */}
       {/* Depth markers every 200m */}
       {
         depthMarkers.map((depth) => (
@@ -315,7 +490,7 @@ import { mlConcepts, depthMarkers, zones } from "../data/mlconcepts.js";
               <img
                 src={`/src/assets/${concept.image}`}
                 alt={concept.name}
-                class="concept-image"
+                class="concept-image  rounded-lg"
                 loading={index < 5 ? "eager" : "lazy"}
                 decoding="async"
               />

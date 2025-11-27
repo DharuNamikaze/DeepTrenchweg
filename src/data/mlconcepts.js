@@ -42,10 +42,10 @@ export const mlConcepts = [
     id: 'svms',
     name: 'SVMs',
     depth: 420,
-    image: 'svms.webp',
+    image: 'svm.webp',
     description: 'Support Vector Machines for optimal hyperplanes',
     category: 'classical-ml',
-    size: 'medium'
+    size: 'large'
   },
   {
     id: 'knn',
@@ -54,16 +54,16 @@ export const mlConcepts = [
     image: 'knn.webp',
     description: 'K-Nearest Neighbors for instance-based learning',
     category: 'classical-ml',
-    size: 'small'
+    size: 'large'
   },
   {
     id: 'naive-bayes',
     name: 'Naive Bayes',
     depth: 580,
-    image: 'naive-bayes.webp',
+    image: 'naiveBayes.webp',
     description: 'Probabilistic classifier based on Bayes theorem',
     category: 'classical-ml',
-    size: 'small'
+    size: 'large'
   },
   {
     id: 'pca',

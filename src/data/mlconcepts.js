@@ -81,13 +81,13 @@ export const mlConcepts = [
     image: 'ica.webp',
     description: 'Independent Component Analysis for signal separation',
     category: 'dimensionality-reduction',
-    size: 'small'
+    size: 'medium'
   },
   {
     id: 't-sne',
     name: 't-SNE',
     depth: 820,
-    image: 't-sne.webp',
+    image: 'tsne.webp',
     description: 'Visualization technique for high-dimensional data',
     category: 'dimensionality-reduction',
     size: 'medium'
@@ -99,7 +99,7 @@ export const mlConcepts = [
     image: 'umap.webp',
     description: 'Uniform Manifold Approximation for better embeddings',
     category: 'dimensionality-reduction',
-    size: 'medium'
+    size: 'large'
   },
 
   // === TWILIGHT ZONE (1000-3000m): Advanced ML & Early Deep Learning ===
@@ -107,7 +107,7 @@ export const mlConcepts = [
     id: 'gradient-boosting',
     name: 'Gradient Boosting',
     depth: 1050,
-    image: 'gradient-boosting.webp',
+    image: 'gradientboosting.webp',
     description: 'Sequential ensemble learning technique',
     category: 'ensemble',
     size: 'large'

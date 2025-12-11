@@ -6,7 +6,7 @@ export const mlConcepts = [
     id: 'linear-regression',
     name: 'Linear Regression',
     depth: 100,
-    image: 'linear.webp',
+    image: '/linear.webp',
     description: 'Finding the best-fit line through data points',
     category: 'classical-ml',
     size: 'large'
@@ -15,7 +15,7 @@ export const mlConcepts = [
     id: 'logistic-regression',
     name: 'Logistic Regression',
     depth: 180,
-    image: 'logistic.webp',
+    image: '/logistic.webp',
     description: 'Classification using the sigmoid function',
     category: 'classical-ml',
     size: 'large'
@@ -24,7 +24,7 @@ export const mlConcepts = [
     id: 'decision-trees',
     name: 'Decision Trees',
     depth: 260,
-    image: 'decision.webp',
+    image: '/decision.webp',
     description: 'Tree-based decisions for classification',
     category: 'classical-ml',
     size: 'large'
@@ -33,7 +33,7 @@ export const mlConcepts = [
     id: 'random-forests',
     name: 'Random Forests',
     depth: 340,
-    image: 'random.webp',
+    image: '/random.webp',
     description: 'Ensemble of decision trees for robust predictions',
     category: 'ensemble',
     size: 'large'
@@ -42,7 +42,7 @@ export const mlConcepts = [
     id: 'svms',
     name: 'SVMs',
     depth: 420,
-    image: 'svm.webp',
+    image: '/svm.webp',
     description: 'Support Vector Machines for optimal hyperplanes',
     category: 'classical-ml',
     size: 'large'
@@ -51,7 +51,7 @@ export const mlConcepts = [
     id: 'knn',
     name: 'KNN',
     depth: 500,
-    image: 'knn.webp',
+    image: '/knn.webp',
     description: 'K-Nearest Neighbors for instance-based learning',
     category: 'classical-ml',
     size: 'large'
@@ -60,7 +60,7 @@ export const mlConcepts = [
     id: 'naive-bayes',
     name: 'Naive Bayes',
     depth: 580,
-    image: 'naiveBayes.webp',
+    image: '/naiveBayes.webp',
     description: 'Probabilistic classifier based on Bayes theorem',
     category: 'classical-ml',
     size: 'large'
@@ -69,7 +69,7 @@ export const mlConcepts = [
     id: 'pca',
     name: 'PCA',
     depth: 660,
-    image: 'pca.webp',
+    image: '/pca.webp',
     description: 'Principal Component Analysis for dimensionality reduction',
     category: 'dimensionality-reduction',
     size: 'medium'
@@ -78,7 +78,7 @@ export const mlConcepts = [
     id: 'ica',
     name: 'ICA',
     depth: 740,
-    image: 'ica.webp',
+    image: '/ica.webp',
     description: 'Independent Component Analysis for signal separation',
     category: 'dimensionality-reduction',
     size: 'medium'
@@ -87,7 +87,7 @@ export const mlConcepts = [
     id: 't-sne',
     name: 't-SNE',
     depth: 820,
-    image: 'tsne.webp',
+    image: '/tsne.webp',
     description: 'Visualization technique for high-dimensional data',
     category: 'dimensionality-reduction',
     size: 'medium'
@@ -96,7 +96,7 @@ export const mlConcepts = [
     id: 'umap',
     name: 'UMAP',
     depth: 900,
-    image: 'umap.webp',
+    image: '/umap.webp',
     description: 'Uniform Manifold Approximation for better embeddings',
     category: 'dimensionality-reduction',
     size: 'large'
@@ -107,7 +107,7 @@ export const mlConcepts = [
     id: 'gradient-boosting',
     name: 'Gradient Boosting',
     depth: 1050,
-    image: 'gradientboosting.webp',
+    image: '/gradientboosting.webp',
     description: 'Sequential ensemble learning technique',
     category: 'ensemble',
     size: 'large'
@@ -116,7 +116,7 @@ export const mlConcepts = [
     id: 'xgboost',
     name: 'XGBoost',
     depth: 1150,
-    image: 'xgboost.webp',
+    image: '/xgboost.webp',
     description: 'Extreme Gradient Boosting for structured data',
     category: 'ensemble',
     size: 'large'
@@ -125,7 +125,7 @@ export const mlConcepts = [
     id: 'lightgbm',
     name: 'LightGBM',
     depth: 1250,
-    image: 'lightgbm.webp',
+    image: '/lightgbm.webp',
     description: 'Light Gradient Boosting Machine for speed',
     category: 'ensemble',
     size: 'medium'
@@ -134,7 +134,7 @@ export const mlConcepts = [
     id: 'catboost',
     name: 'CatBoost',
     depth: 1350,
-    image: 'catboost.webp',
+    image: '/catboost.webp',
     description: 'Categorical Boosting for categorical features',
     category: 'ensemble',
     size: 'medium'
@@ -143,7 +143,7 @@ export const mlConcepts = [
     id: 'cnns',
     name: 'CNNs',
     depth: 1450,
-    image: 'cnns.webp',
+    image: '/cnns.webp',
     description: 'Convolutional Neural Networks for spatial data',
     category: 'computer-vision',
     size: 'large'
@@ -152,7 +152,7 @@ export const mlConcepts = [
     id: 'rnns',
     name: 'RNNs',
     depth: 1550,
-    image: 'rnns.webp',
+    image: '/rnns.webp',
     description: 'Recurrent Neural Networks for sequences',
     category: 'sequence-models',
     size: 'large'
@@ -161,7 +161,7 @@ export const mlConcepts = [
     id: 'lstms',
     name: 'LSTMs',
     depth: 1650,
-    image: 'lstms.webp',
+    image: '/lstms.webp',
     description: 'Long Short-Term Memory for long sequences',
     category: 'sequence-models',
     size: 'medium'
